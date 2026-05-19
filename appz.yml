@@ -10,7 +10,6 @@ build:
   output_files: output/*.zip
   image_template: opensearchdashboard-2.19
 
-
 deploy:
   context: jojin77/DEV
   type: statefulset 
