@@ -1,0 +1,41 @@
+app:
+  name: LogCollectorOS-dashboard
+  code: LCOSD
+  notify: jjpaul@ecloudcontrol.com
+
+build:
+  version: 2.19
+  env: DEV
+  build_file: none
+  output_files: output/*.zip
+  image_template: opensearchdashboard-2.19
+
+
+deploy:
+  context: jojin77/DEV
+  type: statefulset 
+  replicas: 1
+  port:
+  - 5601
+
+volumes:
+- claim: opensearch-data
+  mount: /usr/share/opensearch-dashboards/data
+  name: opensearch-data
+  size: 20Gi
+  mode: ReadWriteOnce
+  class: microk8s-hostpath
+monitor:
+  notify: jjpaul@ecloudcontrol.com      
+
+properties:
+  revision : 6
+  OSD_ADMIN_USER: admin
+  OSD_LOGIN_TIMEOUT: 1800
+  OSD_SESSION_TIMEOUT: 21600
+  AD_SHINGLE_SIZE: 4
+  AD_DETECTION_INTERVAL: 1
+  AD_RECENCY_EMPHASIS: 2560
+  OPENSEARCH_HOSTS: ["http://opensearch:9200"]
+  OSD_ADMIN_PASSWORD :
+    vault: OSD_ADMIN_PASSWORD
