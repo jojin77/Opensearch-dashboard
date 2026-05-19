@@ -29,7 +29,7 @@ monitor:
   notify: jjpaul@ecloudcontrol.com      
 
 properties:
-  revision : 2
+  revision : 3
   OSD_ADMIN_USER: admin
   OSD_LOGIN_TIMEOUT: 1800
   OSD_SESSION_TIMEOUT: 21600
