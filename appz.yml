@@ -34,7 +34,13 @@ properties:
   OSD_SESSION_TIMEOUT: 21600
   AD_SHINGLE_SIZE: 4
   AD_DETECTION_INTERVAL: 1
-  AD_RECENCY_EMPHASIS: 2560
+  AD_WINDOW_DELAY: 1
+  SMTP_HOST: mail.authsmtp.com
+  SMTP_FROM: webmaster@ecloudcontrol.com
+  SMTP_TO: jjpaul@ecloudcontrol.com
+  SMTP_AUTH_ENABLED: 1
+  SMTP_USER: ac75928
+  SMTP_PASSWORD: stalk_work_1992_low
   OPENSEARCH_HOSTS: ["http://opensearch-2-19:9200"]
   OSD_ADMIN_PASSWORD :
     vault: OSD_ADMIN_PASSWORD
