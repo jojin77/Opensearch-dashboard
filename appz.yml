@@ -38,6 +38,8 @@ properties:
   SMTP_HOST: mail.authsmtp.com
   SMTP_FROM: webmaster@ecloudcontrol.com
   SMTP_TO: jjpaul@ecloudcontrol.com
+  SMTP_METHOD: starttls
+  SMTP_PORT: 2525
   SMTP_AUTH_ENABLED: 1
   SMTP_USER: ac75928
   SMTP_PASSWORD: stalk_work_1992_low
