@@ -35,6 +35,7 @@ properties:
   AD_SHINGLE_SIZE: 4
   AD_DETECTION_INTERVAL: 1
   AD_WINDOW_DELAY: 1
+  MONITOR_SCHEDULE: 1h
   SMTP_HOST: mail.authsmtp.com
   SMTP_FROM: webmaster@ecloudcontrol.com
   SMTP_TO: jjpaul@ecloudcontrol.com
